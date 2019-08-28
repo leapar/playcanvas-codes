@@ -1,0 +1,468 @@
+body{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        background-image: url("$15989525%");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        user-select: none;
+        overflow:hidden;
+        position: fixed;
+    }
+
+    *{
+        -webkit-tap-highlight-color:rgba(255,255,255,0);
+        webkit-touch-callout:none;
+        user-select: none;
+        
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -khtml-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        
+    }
+
+     .rightButton{
+        background-image: url("$15989522%");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 12.1%;
+        height: 6.25%;
+        bottom: 3%;
+        right: 3%;
+         z-index:2;
+    }
+    
+    .leftButton{
+        background-image: url("$15989520%");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 12.1%;
+        height: 6.25%;
+        bottom: 3%;
+        left: 3%;
+        z-index:2;
+    }
+    .leftleftButton:focus,.rightButton:focus{
+        outline: none;
+    }
+    
+    .iconActive{
+        background-image: url("$15989523%");
+        background-size: cover;
+        z-index:2;
+    }
+    .iconElement{
+        display: inline-block;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index:2;
+    }
+    .iconElement ul{
+        padding-left: 0px;
+    }
+    .iconElement .icon li{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 7px;
+    }
+    .iconNormal{
+        background-image: url("$15989521%");
+        background-size: cover;
+    }
+
+    .general{
+        position:absolute;
+        transition: opacity 0.3s;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index:2;
+    }
+/* StepOne 标题与时间线 */
+    .step1title{
+        width:48.8%;
+        height:17.75%;
+        top:5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16040859%");
+        pointer-events: none;
+    }
+
+    .timelinegold{
+        width:0%;
+        position:absolute;
+        bottom: 12%;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        transition: width 1s;
+        pointer-events: none;
+        z-index:2;
+    }
+
+    .timepoint{
+        width:7.25%;
+        height:88.24%;
+        position:absolute;
+        right: 12%;
+        top: -40%;
+        background-image: url("$16011124%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s;
+        transform: scale(0);
+        transition-delay: 1s;
+    }
+
+    .timeyear{
+        width:206.6%;
+        height:83.3%;
+        position:absolute;
+        background-image: url("$16040882%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        bottom: -80%;
+        left: 35%;
+        transform: translateX(-45%);
+        transition: opacity 0.3s;
+        opacity:0;
+        transition-delay: 1.8s;
+    }
+
+    .timenum{
+        width:268.3%;
+        height: 41.67%;
+        background-image: url("$16040879%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position:absolute;
+        top:-55%;
+        left:20%;
+        transform: translateX(-40%);
+        transition: opacity 0.3s;
+        opacity:0;
+        transition-delay: 1.8s;
+    }
+
+    .timepoint2{
+        width:7.25%;
+        height:88.24%;
+        position:absolute;
+        left: 17%;
+        top: -40%;
+        background-image: url("$16011124%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s;
+        transform: scale(0);
+        transition-delay: 1s;
+    }
+
+    .timeyear2{
+        width:233.33%;
+        height:83.3%;
+        position:absolute;
+        background-image: url("$16040881%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        bottom: -80%;
+        left: 35%;
+        transform: translateX(-45%);
+        transition: opacity 0.3s;
+        opacity:0;
+        transition-delay: 1.8s;
+    }
+
+    .timenum2{
+        width:453.333%;
+        height: 41.66%;
+        background-image: url("$16040880%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position:absolute;
+        top:-55%;
+        left:12%;
+        transform: translateX(-40%);
+        transition: opacity 0.3s;
+        opacity:0;
+        transition-delay: 1.8s;
+    }
+
+    .imagehow{
+        width:70.048%;
+        height:2.875%;
+        bottom:23%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15989524%");
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+/* 通用标题类 */
+    .stptitle{
+        width:38.89%;
+        height:2.75%;
+        top:5.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+/* 背景文物图，需要更改 */
+    .stp2bg1{
+        width:100%;
+        height:100%;
+        top: 7%;
+        left:-20%;
+        background-position: left;
+        background-image: url("$16040273%");
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+/* 详细信息类 */
+    .stp2bg2{
+        width:87%;
+        height:66.875%;
+        top: 11%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16011130%");
+    }
+
+    .stp2icon{
+        width:25.85%;
+        height:10%;
+        bottom:10%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16011132%");
+        pointer-events: none;
+        opacity:0;
+    }
+
+    .stp2slid{
+        width: 85%;
+        height: 90%;
+        position:absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .wrapper1{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .iScrollLoneScrollbar{
+        border-radius: 3px !important;
+        width: 4px!important;
+        right: -18px !important;
+        background-color: #444444 !important;
+    }
+
+    .iScrollIndicator{
+        background: rgb(230, 202, 142) !important;
+        border: 0px solid rgba(255, 255, 255, 0.9) !important;
+    }
+/* end */
+/* StepThree  */
+     .stp3material{
+        width:81%;
+        height:2.8%;
+        bottom: 13.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16040820%");
+        pointer-events: none;
+        opacity:0;
+    }
+
+    .stp3msg{
+        width:64.6%;
+        height:4.31%;
+        top: 11.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16040821%");
+        pointer-events: none;
+        opacity:0;
+    } 
+/* end */
+/* 4444444444444444444444444444444444444444444444444444444444444444444444444444444444 */
+
+    
+
+     .stp4_btm_bg{
+        width:100%;
+        height:4.18%;
+        bottom: 13.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16040988%");
+        opacity:0;
+        pointer-events: none;
+        background-size: 100% 100%;
+    }
+     .stp4_btm_YH{
+        width:9.66%;
+        height:228%;
+        bottom: 85%;
+        left: 5%;
+        pointer-events: auto;
+    }
+     .stp4_btm_LJD{
+        width:9.66%;
+        height:228%;
+        bottom: 85%;
+        left: 15.7%;
+        pointer-events: auto;
+    }
+     .stp4_btm_GH{
+        width:9.66%;
+        height:228%;
+        bottom: 85%;
+        left: 28.5%;
+        pointer-events: auto;
+    }
+     .stp4_btm_L{
+        width:9.66%;
+        height:228%;
+        bottom: 85%;
+        left: 55.3%;
+        pointer-events: auto;
+    }
+     .stp4_btm_GT{
+        width:9.66%;
+        height:228%;
+        bottom: 85%;
+        left: 85.2%;
+        pointer-events: auto;
+    }
+
+
+     .stp4_BG_K2{
+        width:86.95%;
+        height:50%;
+        bottom: 29%;
+        left:50%;
+        transform: translate(-50%,0);
+        opacity:0;
+        pointer-events: none;
+        z-index:0;
+
+    }
+     .stp4_BG_K{
+        width:100%;
+        height:100%;
+        left:50%;
+        transform: translate(-50%,0);
+        opacity:0;
+        pointer-events: none;
+        z-index:1;
+        background-position: center;
+        background-size: cover;
+         
+    }
+
+
+     .stp4_TopWord{
+        width:77.53%;
+        height:4.18%;
+        top: 12%;
+        left:50%;
+        transform: translate(-50%,0);
+        opacity:0;
+        pointer-events: none;
+    }
+
+     .stp4_Sq{
+        width:52.3%;
+        height:4.06%;
+        bottom: 30%;
+        left:50%;
+        transform: translate(-50%,0);
+        opacity:0;
+        pointer-events: none;
+    }
+
+
+
+#application-canvas{
+    z-index:1;
+}
+
+
+
+
+/* StepFive */
+    .btn_Link{
+        width:59%;
+        height:4.5%;
+        bottom: 23%;
+        height: 0px;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$16011145%");
+        display:none;
+    }
+
+    .btnAudio{
+        width: 40px;
+        height: 40px;
+        top:2%;
+        right:2%;
+        background-position: right;
+    }
+
+    .stp5msg{
+        width: 70.65%;
+        height: 15.375%;
+        bottom: 35%;
+        transform: translate(-50%,0%);
+        left: 50%;
+        pointer-events: none;
+        background-image: url("$16040941%");
+        opacity:0;
+    }
+/* end */
+/* 414*666 分辨率 */
+    @media screen and (max-height: 700px) {
+        .stp2bg1{
+            width:82.61%;
+            left:0%;
+        }
+        .stp2bg2{
+            width:87%;
+            height:65.32%;
+            top: 13%;
+            left:50%;
+            transform: translate(-50%,0);
+            background-image: url("$16011133%");
+        }
+    }
+    

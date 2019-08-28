@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>宋金项饰</title>
+
+
+
+    <script src='../js/jquery-3.3.1.min.js'></script>
+    <script src='../js/iscroll.js'></script>
+    <script src='../js/hammer.min.js'></script>
+    <script src='../js/playcanvas-latest.js'></script>
+
+</head>
+
+<body>
+    <script>
+        // create a PlayCanvas application
+        var canvas = null;
+        (canvas = document.createElement("canvas")).setAttribute("id", "application-canvas");
+        canvas.setAttribute("tabindex", 0);
+        canvas.onselectstart = function () {
+            return !1
+        };
+
+        document.body.appendChild(canvas);
+
+        CONTEXT_OPTIONS = {
+            antialias: !0,
+            alpha: !0,
+            preserveDrawingBuffer: !1,
+            preferWebGl2: !0
+        };
+
+
+        ASSET_PREFIX = "";
+        SCRIPT_PREFIX = "";
+        SCENE_PATH = "672806.json";
+        CONTEXT_OPTIONS = {
+            antialias: !0,
+            alpha: !0,
+            preserveDrawingBuffer: !1,
+            preferWebGl2: !0
+        };
+        SCRIPTS = [15989368, 15989370, 15989369, 15989383, 15989382, 15989367, 16011468, 15989379, 15989376, 15989378,
+                15989371, 15989366, 16065021
+            ],
+            CONFIG_FILENAME = "config.json",
+            INPUT_SETTINGS = {
+                useKeyboard: !0,
+                useMouse: !0,
+                useGamepads: !1,
+                useTouch: !0
+            };
+        pc.script.legacy = false;
+
+        var e = {
+            elementInput: new pc.ElementInput(canvas),
+            keyboard: new pc.Keyboard(window),
+            mouse: new pc.Mouse(canvas),
+            gamepads: new pc.GamePads
+        }
+
+
+        var app = new pc.Application(canvas, {
+            elementInput: e.elementInput,
+            keyboard: e.keyboard,
+            mouse: e.mouse,
+            gamepads: e.gamepads,
+            touch: e.touch,
+            graphicsDeviceOptions: window.CONTEXT_OPTIONS,
+            assetPrefix: window.ASSET_PREFIX || "",
+            scriptPrefix: window.SCRIPT_PREFIX || "",
+            scriptsOrder: window.SCRIPTS || []
+        });
+
+        pc.script.createLoadingScreen(function (e) {
+            var t, i, c = function (e, t) {
+                    return window.editor ? "https://playcanvas.com/api/assets/" + e + "/file/" + t :
+                        "files/assets/" + e + "/1/" + t
+                },
+                d = function () {
+                    var e = document.getElementsByClassName("start-wrap")[0],
+                        t = e.offsetWidth / 71.5;
+                    e.style.height = t + "px"
+                };
+            window.addEventListener("resize", d),
+                t = ["body {", "   height: 100%;,", "    width: 100%;", "    overflow: hidden;",
+                    "    margin: 0;", "    padding: 0;", "    font-size:0", "}",
+                    "html,body{background-color:transparent;}", "#application-splash-wrapper{",
+                    "\theight:100%;", "\twidth:100%;", "    background-size: cover;",
+                    "    background-position: center;", "    background-repeat: no-repeat;",
+                    "    background-color: #fff;", "   margin: auto;", "}", ".front,.back {",
+                    "    background-repeat: no-repeat;", "    background-size: cover;", "    height: 100%;",
+                    "    width: 100%;", "    background-position: absolute;", "    left: 0%;",
+                    "    position: absolute;", "}", ".back {", "    width: 0;",
+                    "    background-position: left;", "}", ".front {", "}", ".start-wrap {", "    width:34.5%;",
+                    "    position: absolute;", "    left: 50%;", "    transform: translate(-50%,0%);",
+                    "    top: 57%;", "    max-width: 143px;", "    max-height: 2px;", "}", ".title {",
+                    "    width:100%;", "    position: absolute;", "    height: 13.75%;", "    top: 22%;",
+                    "    left: 50%;", "    transform: translate(-50%,0%);", "    background-repeat: no-repeat;",
+                    "    background-size: contain;", "    background-position: center;", "}", ".cctv {",
+                    "    width:42.27%;", "    position: absolute;", "    height: 4.75%;", "    bottom: 5%;",
+                    "    left: 50%;", "    transform: translate(-50%,0%);", "    background-repeat: no-repeat;",
+                    "    background-size: contain;", "    background-position: center;", "}", ".pic {",
+                    "    width:34.1%;", "    height: 17.6%;", "    position: absolute;", "    left: 50%;",
+                    "    transform : translate(-50%,0);", "    top: 38%;", "    opacity: 0;", "    z-index: 2;",
+                    "    background-repeat: no-repeat;", "    background-size: contain;",
+                    "    background-position: center;", "}", ".corner {", "    width:34.1%;",
+                    "    height: 17.6%;", "    position: absolute;", "    left: 50%;",
+                    "    transform : translate(-50%,0);", "    top: 38%;", "    z-index: 2;",
+                    "    background-repeat: no-repeat;", "    background-size: contain;",
+                    "    background-position: center;", "}", ".grey {", "    width:34.1%;",
+                    "    height: 17.6%;", "    position: absolute;", "    left: 50%;",
+                    "    transform : translate(-50%,0);", "    top: 38%;", "    z-index: 1;",
+                    "    background-repeat: no-repeat;", "    background-size: contain;",
+                    "    background-position: center;", "}", ".logo {", "    width:27.3%;",
+                    "    height: 10.1%;", "    position: absolute;", "    left: 50%;",
+                    "    transform : translate(-50%,0);", "    top: 6%;", "    background-repeat: no-repeat;",
+                    "    background-size: contain;", "    background-position: center;", "}",
+                    "@media (max-height:700px) {", ".title {", "    height: 15.75%;", "    top: 21%;", "}",
+                    ".pic {", "    height: 21.6%;", "    width: 35%;", "    top: 38%;", "}", ".corner {",
+                    "    height: 21.6%;", "    width: 35%;", "    top: 38%;", "}", ".grey {",
+                    "    height: 21.6%;", "    width: 35%;", "    top: 38%;", "}", ".logo {",
+                    "    height: 12%;", "    width: 27.3%;", "    top: 6%;", "}", ".cctv {",
+                    "    height: 5.7%;", "    bottom: 5%;", "}", ".start-wrap {", "    top: 60.5%;", "}", "}"
+                ].join("\n"),
+                (i = document.createElement("style")).type = "text/css",
+                i.styleSheet ? i.styleSheet.cssText = t : i.appendChild(document.createTextNode(t)),
+                document.head.appendChild(i),
+                function () {
+                    var e = document.createElement("div");
+                    e.id = "application-splash-wrapper",
+                        e.style.backgroundImage = "url(" + c(15989405, "loading-bg.jpg") + ")",
+                        document.body.appendChild(e);
+                    var t = document.createElement("div");
+                    t.className = "start-wrap",
+                        e.appendChild(t);
+                    var i = document.createElement("div");
+                    i.className = "front",
+                        i.style.backgroundImage = "url(" + c(15989410, "loading-line-black.png") + ")";
+                    var s = document.createElement("div");
+                    s.className = "back",
+                        s.style.backgroundImage = "url(" + c(15989411, "loading-line-golden.png") + ")";
+                    var n = document.createElement("div");
+                    n.className = "title",
+                        n.style.backgroundImage = "url(" + c(16040697, "SJ-loading-title.png") + ")";
+                    var a = document.createElement("div");
+                    a.className = "pic",
+                        a.style.backgroundImage = "url(" + c(16040104, "icon-SK.png") + ")";
+                    var r = document.createElement("div");
+                    r.className = "corner",
+                        r.style.backgroundImage = "url(" + c(15989407, "loading-corner.png") + ")";
+                    var o = document.createElement("div");
+                    o.className = "grey",
+                        o.style.backgroundImage = "url(" + c(15989409, "loading-grey.png") + ")";
+                    var h = document.createElement("div");
+                    h.className = "logo",
+                        h.style.backgroundImage = "url(" + c(15989412, "loading-logo.png") + ")";
+                    var l = document.createElement("div");
+                    l.className = "cctv",
+                        l.style.backgroundImage = "url(" + c(16064154, "jimu.png") + ")",
+                        e.appendChild(n),
+                        e.appendChild(a),
+                        e.appendChild(r),
+                        e.appendChild(h),
+                        e.appendChild(o),
+                        e.appendChild(l),
+                        t.appendChild(i),
+                        t.appendChild(s),
+                        d()
+                }(),
+                e.on("preload:end", function () {
+                    e.off("preload:progress")
+                }),
+                e.on("preload:progress", function (e) {
+                    document.getElementsByClassName("back")[0].style.width = 100 * e + "%",
+                        document.getElementsByClassName("pic")[0].style.opacity = e
+                }),
+                e.on("start", function () {
+                    var e = document.getElementById("application-splash-wrapper");
+                    e.parentElement.removeChild(e),
+                        window.removeEventListener("resize", d),
+                        pc.events.fire("StepChange", 0)
+                })
+        });
+        var a = function () {
+            app.resizeCanvas(canvas.width, canvas.height);
+            canvas.style.width = "",
+                canvas.style.height = "";
+            var e = app._fillMode;
+            e != pc.FILLMODE_NONE && e != pc.FILLMODE_KEEP_ASPECT || (e == pc.FILLMODE_NONE && canvas.clientHeight <
+                window.innerHeight || canvas.clientWidth / canvas.clientHeight >= window.innerWidth / window
+                .innerHeight ? canvas.style.marginTop = Math.floor((window.innerHeight - n.clientHeight) / 2) +
+                "px" : canvas.style.marginTop = "")
+        };
+
+        app.configure(CONFIG_FILENAME, function (e) {
+            console.log(e);
+            ! function (e, t, i) {
+                canvas.classList && canvas.classList.add("fill-mode-" + e);
+                var s = "@media screen and (min-aspect-ratio: " + t + "/" + i + ") {";
+                s += "    #application-canvas.fill-mode-KEEP_ASPECT {",
+                    s += "        width: auto;",
+                    s += "        height: 100%;",
+                    s += "        margin: 0 auto;",
+                    s += "    }",
+                    s += "}",
+                    document.head.querySelector && (document.head.querySelector("style").innerHTML += s)
+            }(app._fillMode, app._width, app._height);
+            a();
+            window.addEventListener("resize", a, !1);
+            window.addEventListener("orientationchange", a, !1);
+            app.preload(function (e) {
+                app.loadScene(SCENE_PATH, function (e, t) {
+                    app.start()
+                })
+            })
+
+        });
+        /*app.start();
+
+        // fill the available space at full resolution
+        app.setCanvasFillMode(pc.FILLMODE_FILL_WINDOW);
+        app.setCanvasResolution(pc.RESOLUTION_AUTO);
+
+        // ensure canvas is resized when window changes size
+        window.addEventListener('resize', function() {
+            app.resizeCanvas();
+        });
+
+        // create box entity
+        var cube = new pc.Entity('cube');
+        cube.addComponent('model', {
+            type: 'box'
+        });
+
+        // create camera entity
+        var camera = new pc.Entity('camera');
+        camera.addComponent('camera', {
+            clearColor: new pc.Color(0.1, 0.1, 0.1)
+        });
+
+        // create directional light entity
+        var light = new pc.Entity('light');
+        light.addComponent('light');
+
+        // add to hierarchy
+        app.root.addChild(cube);
+        app.root.addChild(camera);
+        app.root.addChild(light);
+
+        // set up initial positions and orientations
+        camera.setPosition(0, 0, 3);
+        light.setEulerAngles(45, 0, 0);
+
+        // register a global update event
+        app.on('update', function (deltaTime) {
+            cube.rotate(10 * deltaTime, 20 * deltaTime, 30 * deltaTime);
+        });*/
+    </script>
+</body>
+
+</html>

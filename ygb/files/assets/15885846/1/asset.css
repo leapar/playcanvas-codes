@@ -1,0 +1,351 @@
+body{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        background-image: url("$15912141%");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        user-select: none;
+        overflow:hidden;
+        position: fixed;
+    }
+
+
+    *{
+        -webkit-tap-highlight-color:rgba(255,255,255,0);
+        webkit-touch-callout:none;
+        user-select: none;
+        
+        
+        
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -khtml-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        
+    }
+
+     .rightButton{
+        background-image: url("$15885859%");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 12.1%;
+        height: 6.25%;
+        bottom: 3%;
+        right: 3%;
+    }
+    
+    .leftButton{
+        background-image: url("$15885860%");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 12.1%;
+        height: 6.25%;
+        bottom: 3%;
+        left: 3%;
+    }
+    .leftleftButton:focus,.rightButton:focus{
+        outline: none;
+    }
+    
+    .iconActive{
+        background-image: url("$15885858%");
+        background-size: cover;
+    }
+    .iconElement{
+        
+        display: inline-block;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .iconElement ul{
+        margin: 0px;
+        padding-left: 0px;
+    }
+    .iconElement .icon li{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 7px;
+    }
+    .iconNormal{
+        background-image: url("$15885857%");
+        background-size: cover;
+    }
+
+    .general{
+        position:absolute;
+        transition: opacity 0.3s;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+/* StepOne 标题与时间线 */
+    .step1title{
+        width:48.8%;
+        height:17.75%;
+        top:5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885867%");
+        pointer-events: none;
+    }
+
+    .timelinegold{
+        width:0%;
+        position:absolute;
+        bottom: 12%;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        transition: width 1s;
+        pointer-events: none;
+    }
+
+    .timepoint{
+        width:7.25%;
+        height:88.24%;
+        position:absolute;
+        right: 30%;
+        top: -40%;
+        background-image: url("$15885866%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s;
+        transform: scale(0);
+        transition-delay: 1s;
+    }
+
+    .timeyear{
+        width:536.67%;
+        height:85%;
+        position:absolute;
+        background-image: url("$15885863%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        bottom: -80%;
+        left: 0%;
+        transform: translateX(-45%);
+        transition: opacity 0.3s;
+        opacity:0;
+        transition-delay: 1.8s;
+    }
+
+    .timenum{
+        width:536.67%;
+        height: 41.67%;
+        background-image: url("$15885864%");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position:absolute;
+        top:-55%;
+        left:0%;
+        transform: translateX(-40%);
+        transition: opacity 0.3s;
+        opacity:0;
+        transition-delay: 1.8s;
+    }
+
+    .imagehow{
+        width:70.048%;
+        height:2.875%;
+        bottom:23%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885861%");
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+/* 通用标题类 */
+    .stptitle{
+        width:38.89%;
+        height:2.75%;
+        top:5.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+/* 背景文物图，需要更改 */
+    .stp2bg1{
+        width:89.61%;
+        height:85.25%;
+        top: 7%;
+        left:-20%;
+        background-position: left;
+        background-image: url("$15885873%");
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+/* 详细信息类 */
+    .stp2bg2{
+        width:87%;
+        height:66.875%;
+        top: 11%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885869%");
+    }
+
+    .stp2icon{
+        width:25.85%;
+        height:10%;
+        bottom:10%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885872%");
+        pointer-events: none;
+        opacity:0;
+    }
+
+    .stp2slid{
+        width: 85%;
+        height: 90%;
+        position:absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .wrapper1{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .iScrollLoneScrollbar{
+        border-radius: 3px !important;
+        width: 4px!important;
+        right: -18px !important;
+        background-color: #444444 !important;
+    }
+
+    .iScrollIndicator{
+        background: rgb(230, 202, 142) !important;
+        border: 0px solid rgba(255, 255, 255, 0.9) !important;
+    }
+/* end */
+/* StepThree  */
+    .stp3material{
+        width:47.83%;
+        height:3.125%;
+        bottom: 13.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885877%");
+        pointer-events: none;
+        opacity:0;
+    }
+
+    .stp3msg{
+        width:86%;
+        height:9.25%;
+        top: 11.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885878%");
+        pointer-events: none;
+        opacity:0;
+    }
+/* end */
+    .stp4bg{
+        width: 100%;
+        position:absolute;
+        pointer-events: none;
+        trasition: opacity 0.3s;
+        opacity: 0;
+    }
+
+    .stp4msg{
+        width:64.25%;
+        height:4.375%;
+        top: 11.5%;
+        left:50%;
+        transform: translate(-50%,0);
+        background-image: url("$15885883%");
+        pointer-events: none;
+        opacity:0;
+    }
+
+    .stp4btn{
+        width:10.4%;
+        height: 6.625%;
+        top:50%;
+        transform: translate(0%,-50%);
+        right: 5%;
+        display: none;
+    }
+
+    .stp4info{
+        width: 88.2%;
+        height: 11.125%;
+        bottom:11%;
+        transform: translate(-50%,0%);
+        left: 50%;
+        pointer-events: none;
+        opacity:0;
+    }
+/* StepFive */
+    .btn_Link{
+        width:59%;
+        height:4.5%;
+        bottom: 23%;
+        left:50%;
+        height: 0px;
+        transform: translate(-50%,0);
+        background-image: url("$15885899%");
+        display:none;
+    }
+
+    .btnAudio{
+        width: 40px;
+        height: 40px;
+        top:2%;
+        right:2%;
+        background-position: right;
+    }
+
+    .stp5msg{
+        width: 60.63%;
+        height: 12.25%;
+        bottom: 35%;
+        transform: translate(-50%,0%);
+        left: 50%;
+        pointer-events: none;
+        background-image: url("$15885900%");
+        opacity:0;
+    }
+
+/* end */
+/* 414*666 分辨率 */
+    @media screen and (max-height: 700px) {
+        .stp2bg1{
+            width:82.61%;
+            left:0%;
+        }
+        .stp2bg2{
+            width:87%;
+            height:65.32%;
+            top: 13%;
+            left:50%;
+            transform: translate(-50%,0);
+            background-image: url("$15885871%");
+        }
+    }
+    
